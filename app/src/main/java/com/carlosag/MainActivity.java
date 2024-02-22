@@ -7,7 +7,6 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,12 +47,17 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, pantalla_dos.class);
 
-
                 intent.putExtra("mensaje", "Hola Carlos Andrés");
 
                 startActivity(intent);
             }
         });
+
+        String mensaje = getIntent().getStringExtra("mensaje");
+
+        if (mensaje != null) {
+            nombreUsuario.setText(mensaje);
+        }
     }
 
     @Override

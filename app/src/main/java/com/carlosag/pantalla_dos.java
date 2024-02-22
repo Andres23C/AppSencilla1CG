@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class pantalla_dos extends AppCompatActivity {
@@ -33,6 +32,7 @@ public class pantalla_dos extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(pantalla_dos.this, MainActivity.class);
+                intent.putExtra("mensaje", "Volví de pantalla dos");
 
                 startActivity(intent);
             }
